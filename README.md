@@ -74,7 +74,7 @@
  
 #6 auto run bspwm
 
--create z.profile file with content:
+-create .zprofile file with content:
         
         if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
           exec startx
