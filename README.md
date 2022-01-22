@@ -50,7 +50,7 @@
 #1 Install require package
 
     sudo pacman -Syy
-    sudo pacman -S xf86-video-intel xorg xorg-xinit bspwm sxhkd dmenu nitrogen picom xfce4-terminal chromium arandr alsa-utils
+    sudo pacman -S xf86-video-intel xorg xorg-xinit bspwm sxhkd dmenu feh xfce4-terminal chromium alsa-utils
 
 #2 Coppy file to .config directory
 
@@ -63,33 +63,16 @@
     super + Return
             xfce4-terminal
            
-#4 Create .xinitrc file in $HOME directory with content:
+#4 Create .xinitrc or .xsessionrc file  in $HOME directory with content:
         
-    xsetroot -cursor_name left_ptr
-    picom -f &
+    #bin/bash
     exec bspwm
-        
-#5 Comment in picom.conf file:
     
-    #vsync = true
-    
-#6 Run bspwm
+#5 Run bspwm
         
     startx
  
-#7 install and set wallpapper: watch and follow instructions like video
-
-https://www.youtube.com/watch?v=PLBm0C5Gv58&t=923s
-
--view 10:45 - 15:45
-
-+install wallpapper
-
-+arandr
-
-+nitrogen
-
-#8 auto run bspwm
+#6 auto run bspwm
 
 -create z.profile file with content:
         
