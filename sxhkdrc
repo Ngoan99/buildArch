@@ -11,17 +11,19 @@ super + ctrl + c
 
 # volume control
 XF86AudioLowerVolume
-	amixer set Master 5%-
+	amixer -D pulse sset Master 10%-
 
 XF86AudioRaiseVolume
-	amixer set Master 5%+
+	amixer -D pulse sset Master 10%+
 
+XF86AudioMute
+	amixer -D pulse sset Master toggle
 # brightness control
 XF86MonBrightnessDown
-	xbacklight -dec 5
+	xbacklight -dec 25
 
 XF86MonBrightnessUp
-	xbacklight -inc 5
+	xbacklight -inc 25
 
 # screenshot
 Print

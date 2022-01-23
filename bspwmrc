@@ -24,12 +24,12 @@ bspc config focused_border_color 	"#a83232"
 bspc config urgent_border_color 	"#B58900"
 bspc config presel_border_color 	"#26E2FF"
 
-bspc config split_ratio          0.52
+bspc config split_ratio          0.5
 
 #rule display
-bspc rule -a Code desktop='^2'
-bspc rule -a Google-chrome desktop='^3'
-bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Code desktop='^2' state=fullscreen
+bspc rule -a Google-chrome desktop='^4' state=fullscreen
+bspc rule -a Matplotlib desktop='^3' follow=on
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off

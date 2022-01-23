@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+text="$(xsel -o)"
+translate="$(wget -U "Chrome" -qO - "http://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=vi&dt=t&q=$(echo $text | sed "s/[\"'<>]//g")" | sed "s/,,,0]],,.*//g" | awk -F'"' '{print $2}')"
+echo -e "Original text:" "$text"'\n' > /tmp/notitrans
+echo "Translation:" "$translate" >> /tmp/notitrans
+zenity --text-info --title="Translation" --filename=/tmp/notitrans
