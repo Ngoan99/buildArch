@@ -50,7 +50,7 @@
 #1 Install require package
 
     sudo pacman -Syy
-    sudo pacman -S xf86-video-intel xorg xorg-xinit bspwm sxhkd dmenu feh xfce4-terminal chromium alsa-utils xbacklight
+    sudo pacman -S xf86-video-intel xorg xorg-xinit bspwm sxhkd dmenu feh xfce4-terminal chromium alsa-utils xbacklight ibus
 
 #2 Coppy file to .config directory
 
